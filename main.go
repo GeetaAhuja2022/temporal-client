@@ -1,11 +1,8 @@
-package client
+package main
 
 import (
 	"context"
 	"log"
-
-	"github.com/GeetaAhuja2022/temporal-worker/internal"
-	"github.com/GeetaAhuja2022/temporal-worker/workflows"
 
 	"go.temporal.io/sdk/client"
 )
