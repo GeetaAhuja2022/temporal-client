@@ -4,6 +4,9 @@ import (
 	"context"
 	"log"
 
+	"github.com/GeetaAhuja2022/temporal-worker/common"
+	"github.com/GeetaAhuja2022/temporal-worker/workflows"
+
 	"go.temporal.io/sdk/client"
 )
 
@@ -22,13 +25,13 @@ func main() {
 	}
 
 	input := make(map[string]interface{})
-	userData := internal.UserInput{
-		to:      "geeta.ahuja@capitalone.com",
-		subject: "My Subject",
+	userData := common.UserInput{
+		To:      "geeta.ahuja@capitalone.com",
+		Subject: "My Subject",
 	}
 	input["userData"] = userData
-	paymentData := internal.PaymentInput{
-		amount: "10000",
+	paymentData := common.PaymentInput{
+		Amount: "10000",
 	}
 	input["paymentData"] = paymentData
 
